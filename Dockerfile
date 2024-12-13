@@ -17,7 +17,7 @@ CGO_ENABLED=0 go build -trimpath -ldflags "-s -w"
 FROM ghcr.io/andrewl3wis/ubuntu-lancache:master
 MAINTAINER LanCache.Net Team <team@lancache.net>
 
-ENV STEAMCACHE_DNS_VERSION=1 ENABLE_DNSSEC_VALIDATION=false LANCACHE_DNSDOMAIN=cache.lancache.net CACHE_DOMAINS_REPO=https://github.com/uklans/cache-domains.git CACHE_DOMAINS_BRANCH=master UPSTREAM_DNS=8.8.8.8
+ENV STEAMCACHE_DNS_VERSION=1 ENABLE_DNSSEC_VALIDATION=false LANCACHE_DNSDOMAIN=cache.lancache.net CACHE_DOMAINS_REPO=https://github.com/andrewl3wis/cache-domains-with-linux.git CACHE_DOMAINS_BRANCH=master UPSTREAM_DNS=8.8.8.8
 RUN apt-get update && apt-get install -y bind9 curl dnsutils git
 
 COPY overlay/ /
